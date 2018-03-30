@@ -24,7 +24,7 @@ class like
     public function select_all1()
     {
         $cnn=like::connect();
-        $q="select l.*,b.*,u.* from blog_tbl b,likes_tbl l,user_mst u where u.pk_usr_email_id=l.fk_usr_email_id AND b.blog_id=l.fk_blog_id";
+        $q="select l.*,b.*,u.* from blog_tbl b,likes_tbl l,user_mst u where u.pk_usr_email_id=l.fk_usr_id AND b.blog_id=l.fk_blog_id";
         
         $result=$cnn->query($q);
         return $result;
