@@ -26,8 +26,8 @@
 <tr><td>Verification:<td><input type="text" class="form-control" name="txtveri" placeholder="Put Verification"required></tr><br>
 <tr><td>Blood Group:<td><input type="text" class="form-control" name="txtbld" placeholder="Enter Blood Group"required></tr><br>
 <tr><td>BirthDate:<td><input id="date" type="date" value="05-06-2018" class="form-control" name="txtbdate" placeholder="Enter User BirthDate"required></tr><br>
-<tr><td>Token:<td><input type="text" class="form-control" name="txttoken" placeholder="Token"required></tr><br>
-<tr><td>Type:<td><input type="text" class="form-control" name="txttype" placeholder="Enter User Type" required></tr><br>
+<tr><td>Token:<td><disable input type="text" class="form-control" name="txttoken" placeholder="Token"required></tr><br>
+<tr><td>Type:<td><disable input type="text" class="form-control" name="txttype" placeholder="Enter User Type" required></tr><br>
 
 </tr><br></table>
 <tr><center><input type ="submit" class="btn btn-success" name="btnin" value="Insert"></center>
@@ -43,6 +43,8 @@ $_pic="";
 $_veri="";
 $_token="";
 $_type="";
+$_bdate="";
+$_bldgrp="";
 if($_SERVER["REQUEST_METHOD"]=="POST")
 {
     
@@ -55,11 +57,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
      $_veri=$_POST["txtveri"];
      $_token=$_POST["txttoken"];
      $_type=$_POST["txttype"];
+     $_bdate=$_POST["txtbdate"];
+     $_bldgrp=$_POST["txtbld"];
 
 
     require '../shared/classuser.php';
     $conn=new user_all;
-    $result=$conn->insert($_id,$_name,$_mob,$_pass,$_gen,$_pic,$_veri,$_token,$_type);
+    $result=$conn->insert($_id,$_name,$_mob,$_pass,$_gen,$_pic,$_bldgrp,$_bdate,$_veri,$_token,$_type);
 
     if($result===true)
     {

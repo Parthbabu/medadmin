@@ -29,7 +29,7 @@ class user_all
         return $result;
         user_all::disconnect();
     }
-    public function insert($uno,$uemail,$uname,$umob,$upass,$ugen,$upic,$ubld,$ubdate,$uveri,$utoken,$utype)
+    public function insert($uemail,$uname,$umob,$upass,$ugen,$upic,$ubld,$ubdate,$uveri,$utoken,$utype)
     {
         $cnn=user_all::connect();
         $vari=0;      
