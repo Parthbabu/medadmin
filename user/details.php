@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,6 +61,7 @@ echo "<b>   Type          :        </b>    ".$row["usr_type"]."<br><br>";
 
   echo '</div>';
   }
+  $_SESSION['type']=$row['usr_type'];
   ?>
 
 </body>

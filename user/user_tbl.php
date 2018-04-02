@@ -1,7 +1,65 @@
+<?php
+    session_start();
+    if($_SERVER['QUERY_STRING'])        
+    {
+        $msg=$_GET["msg"];
+        
+        
+    echo '<div id="snackbar" class="show">'.$msg.'</div>';
+    
+
+
+    }
+?>
 
 <!DOCTYPE HTML>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadeout 0.5s;
+    -webkit-animation:  fadein 2.5s ;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+</style>
+
 <title>Admin</title>
 
 
@@ -45,8 +103,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             });
         });
     </script>
- 
+ <script type="text/javascript">
+        myFunction();
+     </script>
+     <script>
+
+    var x = document.getElementById("snackbar")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+
+</script>
+
+
 <div id="wrapper">
+
      <!-- Navigation -->
          <nav class="top1 navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
        <div class="navbar-header">
@@ -201,11 +271,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <!-- /.navbar-static-side -->
         </nav>
+        
         <div id="page-wrapper">
         <div class="col-md-12 graphs">
 	   <div class="xs">
   	 <h3>User</h3>
+
   	<div class="bs-example4" data-example-id="contextual-table">
+      <form method="post" action="addmin.php">
     <table class="table" id="dataTables">
       <thead>
         <tr>
@@ -216,12 +289,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           <th>Mobile<span class="glyphicon glyphicon-sort"></th>
           <th>Password<span class="glyphicon glyphicon-sort"></th>
           <th>Gender<span class="glyphicon glyphicon-sort"></th>
-                 
+          
+          <th>Make Admin</th>       
           <th>Action</th>
+         
+          
         </tr>
       </thead>
       <tbody>
       <?php
+      
       
 require '../shared/classuser.php';
 $res=user_all::select_all();
@@ -237,23 +314,35 @@ $res=user_all::select_all();
            echo '<td>'. $row["usr_mno"] .'</td>';
            echo '<td>'. $row["usr_pass"] .'</td>';
            echo '<td>'. $row["usr_gen"] .'</td>';
+           
+           echo '<td>';
+         //  echo '<a href="addmin.php?id='.$row["pk_usr_email_id"].'" class="btn btn-primary">Admin </a>';
+           echo '<a href="addmin.php?id='.$row["pk_usr_email_id"].'" class="btn btn-primary">Admin </a>';
+           //echo '<input type="submit" value="Admin"  class="btn btn-primary"name="btn"><a href="addmin.php"></a> </td>';           
+ 
         
            echo '<td> <a href="delete.php?id='.$row["usr_sr_no"].'"><span class="glyphicon glyphicon-trash"></span></a>
              <a href="update.php?id='.$row["pk_usr_email_id"].'"> | <span class="glyphicon glyphicon-pencil"></span></a>
              <a href="details.php?id='.  $row["pk_usr_email_id"] .'"> | <span  class="glyphicon glyphicon-plus-sign"></span> </td>';
-
            
+
        echo  '</tr>';
+
+       
        
 }
+$_SESSION["id"]=$row['pk_usr_email_id'];
+
 
     
       ?>
       </tbody>
     </table>
+    
     <center>
 <button type="button"  class="btn btn-primary" ><a href="insert.php">Insert</a></button>
 </center>
+</form>
    </div>
     </div><!-- /.table-responsive -->
   </div>
@@ -264,11 +353,15 @@ $res=user_all::select_all();
       </div>
       <!-- /#page-wrapper -->
    </div>
+
     <!-- /#wrapper -->
 <!-- Nav CSS -->
 <link href="../web/css/custom.css" rel="stylesheet">
 <!-- Metis Menu Plugin JavaScript -->
 <script src="../web/js/metisMenu.min.js"></script>
 <script src="../web/js/custom.js"></script>
+
+
+
 </body>
 </html>
