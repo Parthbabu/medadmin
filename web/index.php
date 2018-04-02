@@ -147,37 +147,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <!-- /.nav-second-level -->
                        <!-- </li>-->
                         <li>
-                            <a href="#"><i class="fa fa-table nav_icon"></i>Tables<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-								<li>
-                                    <a href="#"><i class="fa fa-table nav_icon"></i>Doctor<span class="fa arrow"></span></a>
-									<ul class="nav nav-second-level">
-                                <li>
-								    <a href="../doctor/doctor_tbl.php">Personal Information</a>
-									<a href="../specialist/specialist_tbl.php">Specialist</a>
-									<a href="../degree/degree_tbl.php">Degree</a>
-									<a href="../blog/blog_tbl.php">Blogs</a>
+                            <a href="#"><i class="fa fa-table nav_icon"></i>Tables</span></a><br>
+                            
+                                
+								    <a href="../doctor/doctor_tbl.php"><i class="fa fa-table nav_icon"></i>Doctor Information</a><br>
+									<a href="../specialist/specialist_tbl.php"><i class="fa fa-table nav_icon"></i>Specialist</a><br>
+									<a href="../degree/degree_tbl.php"><i class="fa fa-table nav_icon"></i>Degree</a><br>
+									<a href="../blog/blog_tbl.php"><i class="fa fa-table nav_icon"></i>Blogs</a><br>
 									
-									</li>
-									</ul>
-									</li>
-                                    <a href="../user/user_tbl.php">User</a>
-									<li>
-									<a href="#"><i class="fa fa-table nav_icon"></i>Medicine<span class="fa arrow"></span></a>
-									<ul class="nav nav-third-level">
-                                <li>
-                                    <a href="../medicine/medicine_tbl.php">Medicne Details</a>
-									<a href="../medicine_type/medicine_type_tbl.php">Medicne Type</a>
-									</li>
-									</ul>
-									</li>
-                                    <a href="../prescription/prescription_tbl.php">Prescription</a><br>
-									<a href="../reminder/reminder_tbl.php">Reminder</a><br>
-									<a href="../like/like_tbl.php">Like</a>
+									
+                                    <a href="../user/user_tbl.php"><i class="fa fa-table nav_icon"></i>User</a><br>
+									
+								
+                                    <a href="../medicine/medicine_tbl.php"><i class="fa fa-table nav_icon"></i>Medicne Details</a><br>
+									<a href="../medicine_type/medicine_type_tbl.php"><i class="fa fa-table nav_icon"></i>Medicne Type</a><br>
+								    <a href="../prescription/prescription_tbl.php"><i class="fa fa-table nav_icon"></i>Prescription</a><br>
+									<a href="../reminder/reminder_tbl.php"><i class="fa fa-table nav_icon"></i>Reminder</a><br>
+									<a href="../like/like_tbl.php"><i class="fa fa-table nav_icon"></i>Like</a>
 
-                                </li>
-                            </ul>
+                                
+                            
                             <!-- /.nav-second-level -->
                         </li>
                        

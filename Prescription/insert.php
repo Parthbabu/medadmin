@@ -19,7 +19,7 @@
 
 <tr><td>User Email:<td><input type="email" class="form-control" name="txtuid" placeholder="Enter User Id "required></tr><br>
 <tr><td>Doctor Email:<td><input type="email" class="form-control" name="txtdid" placeholder="Enter Doctor Id"required></tr><br>
-<tr><td>Medicine Id:<td><input type="text" class="form-control" name="txtmid" placeholder="Enater Medicine Id" required></tr><br>
+<tr><td>Medicine collection:<td><input type="text" class="form-control" name="txtmid" placeholder="Enater Medicine collection" required></tr><br>
 <tr><td>Morning:<td><input type="text" class="form-control" name="txtmor" placeholder="Morning"required></tr><br>
 <tr><td>Noon:<td><input type="text" class="form-control" name="txtnoon" placeholder="Noon"required></tr><br>
 <tr><td>Night:<td><input type="text" class="form-control" name="txtnight" placeholder="Night"required></tr><br>

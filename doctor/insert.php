@@ -181,8 +181,8 @@
 
 <tr><td>Mobile No:<td><input type="text" class="form-control" pattern="[7|8|9]{1}[0-9]{9}" title="Enter proper Mobile Number" name="txtmob" placeholder="Enter Mobile NO"></tr><br>
 
-<tr><td>Verification:<td><input type="text" class="form-control" name="txtveri" placeholder="Put Verification"required></tr><br>
-<tr><td>Token:<td><input type="text" class="form-control" name="txttoken" placeholder="Token" required></tr><br>
+<tr><td>Verification:<td><disable input type="text" class="form-control" name="txtveri" placeholder="Put Verification"></tr><br>
+<tr><td>Token:<td><disable input type="text" class="form-control" name="txttoken" placeholder="Token" ></tr><br>
 
 
 </tr><br></table>
