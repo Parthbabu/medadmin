@@ -20,10 +20,10 @@
 <tr><td>User Email:<td><input type="email" class="form-control" name="txtuid" placeholder="Enter User Id "required></tr><br>
 <tr><td>Doctor Email:<td><input type="email" class="form-control" name="txtdid" placeholder="Enter Doctor Id"required></tr><br>
 <tr><td>Medicine collection:<td><input type="text" class="form-control" name="txtmid" placeholder="Enater Medicine collection" required></tr><br>
-<tr><td>Morning:<td><input type="text" class="form-control" name="txtmor" placeholder="Morning"required></tr><br>
-<tr><td>Noon:<td><input type="text" class="form-control" name="txtnoon" placeholder="Noon"required></tr><br>
-<tr><td>Night:<td><input type="text" class="form-control" name="txtnight" placeholder="Night"required></tr><br>
-<tr><td>Instruction:<td><input type="text" class="form-control" name="txtins" placeholder="Any Instruction" required></tr><br>
+<tr><td>Morning:<td><input type="text" class="form-control" name="txtmor" placeholder="Morning"></tr><br>
+<tr><td>Noon:<td><input type="text" class="form-control" name="txtnoon" placeholder="Noon"></tr><br>
+<tr><td>Night:<td><input type="text" class="form-control" name="txtnight" placeholder="Night"></tr><br>
+<tr><td>Instruction:<td><input type="text" class="form-control" name="txtins" placeholder="Any Instruction" ></tr><br>
 <tr><td>Day:<td><input type="text" class="form-control" name="txtday" pattern="[0-9]{1,2}" title="In Digits Only ex.5" placeholder="Enater Days"></tr><br>
 <tr><td>Date:<td><input id="date" type="date" value="05-06-2018" class="form-control" name="txtdate" placeholder="Enter Datetime" required></tr><br>
 

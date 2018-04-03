@@ -18,9 +18,9 @@
 
 <tr><td>User:<td><input type="email" class="form-control" name="txtusr" placeholder="Enter User Id" required></tr><br>
 <tr><td>Reminder Title:<td><input type="text" class="form-control" name="txttitle" placeholder="Enter Title" required></tr><br>
-<tr><td>Reminder Description:<td><input type="text" class="form-control" name="txtdesc" placeholder="Enter Description" required></tr><br>
-<tr><td>StartDate:<td><input id="date" type="date" value="05-06-2018" class="form-control" name="txtsdate" placeholder="Enter Start Date" required></tr><br>
-<tr><td>EndDate:<td><input id="date" type="date" value="05-06-2018" class="form-control" name="txtedate" placeholder="Enter End Date" required></tr><br>
+<tr><td>Reminder Description:<td><input type="text" class="form-control" name="txtdesc" placeholder="Enter Description" ></tr><br>
+<tr><td>StartDate:<td><input id="date" type="date" value="05-06-2018" class="form-control" name="txtsdate" placeholder="Enter Start Date" ></tr><br>
+<tr><td>EndDate:<td><input id="date" type="date" value="05-06-2018" class="form-control" name="txtedate" placeholder="Enter End Date" ></tr><br>
 <!--<tr><td>Specialist:<td><input type="text" class="form-control" name="txtspec" placeholder="Specialist"></tr><br>-->
 
 </select>

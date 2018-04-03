@@ -173,8 +173,8 @@
 </select>
 </tr><br>
 
-<tr><td>Profile:<td><input type="text" class="form-control" name="txtpic"  placeholder="Profile pic" required></tr><br>
-<tr><td>Address:<td><input type="text" class="form-control" name="txtadd" placeholder="Enter Address" required></tr><br>
+<tr><td>Profile:<td><input type="text" class="form-control" name="txtpic"  placeholder="Profile pic" ></tr><br>
+<tr><td>Address:<td><input type="text" class="form-control" name="txtadd" placeholder="Enter Address" ></tr><br>
 
 <!--<tr><td>Gender:<td><input type="text" class="form-control" name="txtgen" placeholder="Gender"></tr><br>-->
 <tr><td>Gender:<td><input type="radio" name="txtgen" value="Male" checked required="required">&nbsp  Male &nbsp &nbsp &nbsp<input type="radio" name="txtgen" value="Female">&nbsp Female</tr><br>
@@ -182,7 +182,7 @@
 <tr><td>Mobile No:<td><input type="text" class="form-control" pattern="[7|8|9]{1}[0-9]{9}" title="Enter proper Mobile Number" name="txtmob" placeholder="Enter Mobile NO"></tr><br>
 
 <tr><td>Verification:<td><disable input type="text" class="form-control" name="txtveri" placeholder="Put Verification"></tr><br>
-<tr><td>Token:<td><disable input type="text" class="form-control" name="txttoken" placeholder="Token" ></tr><br>
+<tr><td>Token:<td><disable input type="text" class="form-control" name="txttoken" placeholder="Token"></tr><br>
 
 
 </tr><br></table>
