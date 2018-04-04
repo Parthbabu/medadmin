@@ -76,7 +76,7 @@ $_name=$row["usr_name"];
     
        <div class="row">
         <div class="form-group col-ld-10">
-            <tr><td>Blood Group:<td><input type="text" value="<?php echo $_bld ?>" name="txtbld" class="form-control" id="text" placeholder="Enter Blood Grp" required >
+            <tr><td>Blood Group:<td><disable input type="text" value="<?php echo $_bld ?>" name="txtbld" class="form-control" id="text" placeholder="Enter Blood Grp" required >
         </tr><br></div>
     </div>
     

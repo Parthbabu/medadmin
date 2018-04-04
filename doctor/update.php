@@ -32,10 +32,10 @@ $_name=$row["doc_name"];
  $_mob=$row["doc_mno"];
  $_pass=$row["doc_pass"];
  $_gen=$row["doc_gen"];
- $_pic=$row["doc_pro_pic"];
+ //$_pic=$row["doc_pro_pic"];
 $_lic=$row["doc_lic_no"];
-$_spe=$row["fk_spec_id"];
-$_deg=$row["fk_deg_id"];
+//$_spe=$row["fk_spec_id"];
+//$_deg=$row["fk_deg_id"];
 $_add=$row["doc_add"];
 
 ?>
@@ -60,9 +60,9 @@ $_add=$row["doc_add"];
         <div class="form-group col-ld-10">
             <tr><td>Enter Doctor Name:<td><input type="text" value="<?php echo $_name ?>" name="txtname" class="form-control" id="text" placeholder="Enter Your Name" required >
         </tr><br></div>
-       <div class="row">
+      <!-- <div class="row">
       <div class="form-group col-ld-10">
-            <tr><td>Specialist:<td><input type="text" value="<?php echo $_spe ?>" name="txtspe" class="form-control" id="text" placeholder="Specialist" required >
+            <tr><td>Specialist:<td><disable input type="text" value="<?php echo $_spe ?>" name="txtspe" class="form-control" id="text" placeholder="Specialist" required >
         </tr><br></div>
     </div>
 <!--<tr><td>Specialist:<td><select name="txtspe">
@@ -72,17 +72,17 @@ $_add=$row["doc_add"];
 <option name="3" value="3">surgon</option>
 <option name="5" value="5">cardiologist</option>
 </select>
-</tr><br>-->
+</tr><br>
     <div class="row">
         <div class="form-group col-ld-10">
-            <tr><td>Degree:<td><input type="text" value="<?php echo $_deg ?>" name="txtdeg" class="form-control" id="text" placeholder="Enter Degree Id" required >
+            <tr><td>Degree:<td><disable input type="text" value="<?php echo $_deg ?>" name="txtdeg" class="form-control" id="text" placeholder="Enter Degree Id" required >
         </tr><br></div>
     </div>
     <div class="row">
         <div class="form-group col-ld-10">
-            <tr><td>Profile pic<td><input type="text" value="<?php echo $_pic ?>" name="txtpic" class="form-control" id="text" placeholder="Enter Your pic" required >
+            <tr><td>Profile pic<td><disable input type="text" value="<?php echo $_pic ?>" name="txtpic" class="form-control" id="text" placeholder="Enter Your pic" required >
         </tr><br></div>
-    </div>
+    </div>-->
     <div class="row">
         <div class="form-group col-ld-10">
             <tr><td>Enter Address:<td><input type="text" value="<?php echo $_add ?>" name="txtadd" class="form-control" id="text" placeholder="Enter Your Address" required >

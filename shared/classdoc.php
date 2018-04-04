@@ -28,10 +28,10 @@ class doctor_all
         return $result;
         doctor_all::disconnect();
     }
-         public function update($demail,$dpass,$dlic,$dname,$dspe,$ddeg,$dpic,$dadd,$dgen,$dmob)
+         public function update($demail,$dpass,$dlic,$dname,$dadd,$dgen,$dmob)
     {
-               $cnn=doctor_all::connect();
-               $q="update doctor_mst set doc_pass='". $dpass ."', doc_lic_no='". $dlic  ."', doc_name='". $dname  ."', fk_spec_id='". $dspe  ."',fk_deg_id='". $ddeg  ."',doc_pro_pic='". $dpic  ."',doc_add='". $dadd  ."',doc_gen='". $dgen  ."',doc_mno='". $dmob  ."' where pk_doc_email_id='". $demail ."'";
+        $cnn=doctor_all::connect();
+         $q="update doctor_mst set doc_pass='". $dpass ."', doc_lic_no='". $dlic  ."', doc_name='". $dname  ."',doc_add='". $dadd  ."',doc_gen='". $dgen  ."',doc_mno='". $dmob  ."' where pk_doc_email_id='". $demail ."'";
          $result=$cnn->query($q);
          echo $q;
         return $result;

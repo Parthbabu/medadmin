@@ -18,8 +18,8 @@
 
 <tr><td>Medicine Name:<td><input type="text" class="form-control" name="txtmname" placeholder="Enater Medicine Name" required></tr><br>
 <tr><td>Company  Name:<td><input type="text" class="form-control" name="txtcname" placeholder="Enater Company Name" required></tr><br>
-<tr><td>Medicine Uses:<td><input type="text" class="form-control" name="txtuse" placeholder="Enter Your Uses" reqiuired></tr><br>
-<tr><td>Medicine Type:<td><input type="text" class="form-control" name="txttype" placeholder="Enter Medicine Type" required></tr><br>
+<tr><td>Medicine Uses:<td><input type="text" class="form-control" name="txtuse" placeholder="Enter Your Uses" ></tr><br>
+<tr><td>Medicine Type:<td><input type="text" class="form-control" name="txttype" placeholder="Enter Medicine Type" ></tr><br>
 
 </tr><br></table>
 <tr><center><input type ="submit" class="btn btn-success" name="btnin" value="Insert"></center>
