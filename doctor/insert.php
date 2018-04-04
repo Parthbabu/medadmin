@@ -215,11 +215,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $_gen=$_POST["txtgen"];
      $_pic=$_POST["txtpic"];
      $_veri=$_POST["txtveri"];
-     $_token=$_POST["txttoken"];
+   //  $_token=$_POST["txttoken"];
      $_lic=$_POST["txtlic"];
     $_spe=$_POST["txtspe"];
     $_deg=$_POST["txtdeg"];
     $_add=$_POST["txtadd"];
+    $r=md5(rand());
+    $_token=substr($r,0,10);
+   
 
     require '../shared/classdoc.php';
     $conn=new doctor_all;

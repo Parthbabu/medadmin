@@ -55,11 +55,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     $_gen=$_POST["txtgen"];
      $_pic=$_POST["txtpic"];
      $_veri=$_POST["txtveri"];
-     $_token=$_POST["txttoken"];
-     $_type=$_POST["txttype"];
+   //  $_token=$_POST["txttoken"];
+    // $_type=$_POST["txttype"];
      $_bdate=$_POST["txtbdate"];
      $_bldgrp=$_POST["txtbld"];
-
+     $r=md5(rand());
+     $_token=substr($r,0,10);
+     $_type='User';
 
     require '../shared/classuser.php';
     $conn=new user_all;

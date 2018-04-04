@@ -17,12 +17,15 @@
 <h1><center>Insert Your Data</center></h1>
 
 <!--<tr><td>Specialist Name:<td><input type="text" class="form-control" name="txtsname" placeholder="Enater Specialist Name"></tr><br>-->
-<tr><td>Specialist:<td><select name="txtsname">
+<tr><td><h4><b>Specialist:</b></h4></td>
+<!--<select name="txtsname">
 <option name="1"  value="child specialist">chaild specialist</option>
 <option name="2" value="dentist">dentist</option>
 <option name="3" value="surgon">surgon</option>
 <option name="5" value="cardiologist">cardiologist</option>
-</select>
+</select>-->
+<td><input type="text" class="form-control" name="txtsname" placeholder="Enater Specialist Name">
+</td>
 </tr><br>
 
 

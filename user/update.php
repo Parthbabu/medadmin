@@ -43,7 +43,7 @@ $_name=$row["usr_name"];
 
     <div class="row">
         <div class="form-group col-ld-10">
-         <tr><td>Enter Id:<td>   <input type="text" value="<?php echo $_id; ?>" name="txtid" class="form-control" id="text" placeholder="Enter Id" required  >
+         <tr><td>Enter Id:<td>   <input type="text" value="<?php echo $_id; ?>" name="txtid" class="form-control" id="text" placeholder="Enter Id" required disabled >
         </tr><br></div>
     </div>
     <div class="row">
