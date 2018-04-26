@@ -168,7 +168,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								    <a href="../doctor/doctor_tbl.php"><i class="fa fa-table nav_icon"></i>Doctor Information</a><br>
 									<a href="../specialist/specialist_tbl.php"><i class="fa fa-table nav_icon"></i>Specialist</a><br>
 									<a href="../degree/degree_tbl.php"><i class="fa fa-table nav_icon"></i>Degree</a><br>
-									<a href="sblog_tbl.php"><i class="fa fa-table nav_icon"></i>Blogs</a><br>
+									<a href="blog_tbl.php"><i class="fa fa-table nav_icon"></i>Blogs</a><br>
 									
 									
                                     <a href="../user/user_tbl.php"><i class="fa fa-table nav_icon"></i>User</a><br>

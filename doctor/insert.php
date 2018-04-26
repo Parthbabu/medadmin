@@ -150,28 +150,49 @@
 
 <tr><td>Email:<td><input type="email" class="form-control" name="txtid" placeholder="Enter User Email Id" required></tr><br>
 
-<tr><td>Password:<td><input type="password" class="form-control" name="txtpass" pattern=".{6,12}" title="6 to 12 chracters" placeholder="Enter Password"  required></tr><br>
+<tr><td>Password:<td><input type="password" class="form-control" name="txtpass" pattern=".{6,12}" title="6 to 12 characters" placeholder="Enter Password"  required></tr><br>
 
 <tr><td>License Number:<td><input type="text" class="form-control" name="txtlic" pattern="[0-9]{1,15}" title="In Digits Only ex.1573" placeholder="Enter Lisence number" required></tr><br>
 
 <tr><td>Name:<td><input type="text" class="form-control" name="txtname" pattern="[A-Za-z]{1,15}" title="Doctor Name should only contain Letters ex.parth" placeholder="Enter User Name "></tr><br>
 
 <!--<tr><td>Specialist:<td><input type="text" class="form-control" name="txtspe" placeholder="Specialist"></tr><br>-->
-<tr><td>Specialist:<td><select name="txtspe">
-<option name="1"  value="1">chaild specialist</option>
-<option name="2" value="2">dentist</option>
-<option name="3" value="3">surgon</option>
-<option name="5" value="5">cardiologist</option>
-</select>
-</tr><br>
+
+<?php
+require '../shared/classspecialist.php';
+$res=specialist::select_all();
+echo '<tr>'.'<td>'.'specialist:'.'<td>'.'<select name="txtspe">';
+while($row=$res->fetch_assoc())
+{
+//<tr><td>Specialist:<td><select name="txtspe">
+
+echo '<option name="1"  value="<?php echo $row["spec_name"] ?>'.$row["spec_name"] .'</option>';
+//<option name="2" value="2">dentist</option>
+//<option name="3" value="3">surgon</option>
+//<option name="5" value="5">cardiologist</option>
+//</select>
+//</tr>
+}
+echo '</select>';
+?>
+<br>
 <!--<tr><td>Degree Id:<td><input type="text" class="form-control" name="txtdeg" placeholder="Enter Degree Id"></tr><br>-->
+<?php
+require '../shared/classspecialist.php';
+$res=specialist::select_all();
+echo '<tr>'.'<td>'.'specialist:'.'<td>'.'<select name="txtspe">';
+while($row=$res->fetch_assoc())
+{
+
 <tr><td>Degree:<td><select name="txtdeg" >
 <option name="1"  value="1">Mbbs</option>
 <option name="2" value="2">Md</option>
 <option name="3" value="3">DMD</option>
 
 </select>
-</tr><br>
+</tr>
+?>
+<br>
 
 <tr><td>Profile:<td><input type="text" class="form-control" name="txtpic"  placeholder="Profile pic" ></tr><br>
 <tr><td>Address:<td><input type="text" class="form-control" name="txtadd" placeholder="Enter Address" ></tr><br>
