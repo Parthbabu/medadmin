@@ -24,7 +24,7 @@
 <tr><td>Noon:<td><input type="text" class="form-control" name="txtnoon" placeholder="Noon"></tr><br>
 <tr><td>Night:<td><input type="text" class="form-control" name="txtnight" placeholder="Night"></tr><br>
 <tr><td>Instruction:<td><input type="text" class="form-control" name="txtins" placeholder="Any Instruction" ></tr><br>
-<tr><td>Day:<td><input type="text" class="form-control" name="txtday" pattern="[0-9]{1,2}" title="In Digits Only ex.5" placeholder="Enater Days"></tr><br>
+<tr><td>Day:<td><input type="text" class="form-control" name="txtday" pattern="[0-9]{1,2}" title="In Digits Only ex.5" placeholder="Enter Days"></tr><br>
 <tr><td>Date:<td><input id="date" type="date" value="05-06-2018" class="form-control" name="txtdate" placeholder="Enter Datetime" required></tr><br>
 
 </tr><br></table>

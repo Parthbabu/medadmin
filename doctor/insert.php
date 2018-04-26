@@ -166,7 +166,7 @@ while($row=$res->fetch_assoc())
 {
 //<tr><td>Specialist:<td><select name="txtspe">
 
-echo '<option name="1"  value="<?php echo $row["spec_name"] ?>'.$row["spec_name"] .'</option>';
+echo '<option name="1"  value=" echo $row["pk_spec_id"] ">'.$row["spec_name"] .'</option>';
 //<option name="2" value="2">dentist</option>
 //<option name="3" value="3">surgon</option>
 //<option name="5" value="5">cardiologist</option>
@@ -178,19 +178,20 @@ echo '</select>';
 <br>
 <!--<tr><td>Degree Id:<td><input type="text" class="form-control" name="txtdeg" placeholder="Enter Degree Id"></tr><br>-->
 <?php
-require '../shared/classspecialist.php';
-$res=specialist::select_all();
-echo '<tr>'.'<td>'.'specialist:'.'<td>'.'<select name="txtspe">';
+require '../shared/classdegree.php';
+$res=degree_all::select_all();
+echo '<tr>'.'<td>'.'Degree:'.'<td>'.'<select name="txtdeg">';
 while($row=$res->fetch_assoc())
 {
 
-<tr><td>Degree:<td><select name="txtdeg" >
-<option name="1"  value="1">Mbbs</option>
-<option name="2" value="2">Md</option>
-<option name="3" value="3">DMD</option>
+echo '<option name="1"  value=" echo $row["pk_deg_id"] ">'.$row["deg_name"] .'</option>';
+//<tr><td>Degree:<td><select name="txtdeg" >
+//<option name="1"  value="1">Mbbs</option>
+//<option name="2" value="2">Md</option>
+//<option name="3" value="3">DMD</option>
+}
+echo '</select>';
 
-</select>
-</tr>
 ?>
 <br>
 

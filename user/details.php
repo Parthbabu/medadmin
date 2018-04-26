@@ -74,7 +74,7 @@ $result=$conn->query($sql);
      echo '<td>Mobile no  </td>';
      echo '<td>'. $row["usr_mno"] .'</td>';
      echo '</tr>';
-     echo '<tr>';
+  /*   echo '<tr>';
      echo '<td>Verification  </td>';
      echo '<td>'. $row["usr_verify"] .'</td>';
      echo '</tr>';
@@ -82,7 +82,7 @@ $result=$conn->query($sql);
 
      echo '<td>Token  </td>';
      echo '<td>'. $row["usr_token"] .'</td>';
-     echo '</tr>';
+     echo '</tr>';*/
      echo '<tr>';
      echo '<td>Type </td>';
      echo '<td>'. $row["usr_type"] .'</td>';

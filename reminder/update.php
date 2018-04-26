@@ -51,13 +51,13 @@ $_rtitle=$row["rem_title"];
     </div>
     <div class="row">
         <div class="form-group col-ld-10">
-            <tr><td>Enter StartDate:<td><input type="text" value="<?php echo $_sdate ?>" name="txtsdate" class="form-control" id="text" placeholder="Enter Dates" required >
+            <tr><td>Enter StartDate:<td><input type="date" value="<?php echo $_sdate ?>" name="txtsdate" class="form-control" id="text" placeholder="Enter Dates" required >
         </tr><br></div>
     </div>
     
     <div class="row">
         <div class="form-group col-ld-10">
-            <tr><td>Enter EndDate:<td><input type="text" value="<?php echo $_edate ?>" name="txtedate" class="form-control" id="text" placeholder="Enter Dates" required >
+            <tr><td>Enter EndDate:<td><input type="date" value="<?php echo $_edate ?>" name="txtedate" class="form-control" id="text" placeholder="Enter Dates" required >
         </tr><br></div>
     </div>
     

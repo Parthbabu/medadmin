@@ -40,12 +40,12 @@ $_ins=$row["pres_instr"];
 <table class="table">
     <div class="row">
         <div class="form-group col-ld-10">
-          <tr><td>Enter Id:<td>  <input type="text" value="<?php echo $_id; ?>" name="txtid" class="form-control" id="text" placeholder="Enter Id" required  >
+          <tr><td>Enter Id:<td>  <input type="text" value="<?php echo $_id; ?>" name="txtid" class="form-control" id="text" placeholder="Enter Id"  >
         </tr><br></div>
     </div>
     <div class="row">
         <div class="form-group col-ld-10">
-            <tr><td>Emter Medicine Id:<td><input type="text" value="<?php echo $_mid ?>" name="txtmid" class="form-control" id="text" placeholder="Enter Medicine Id" required >
+            <tr><td>collection of medicine:<td><input type="text" value="<?php echo $_mid ?>" name="txtmid" class="form-control" id="text" placeholder="Enter Medicine collection" required >
         </tr><br></div>
     </div>
     <div class="row">
@@ -70,12 +70,12 @@ $_ins=$row["pres_instr"];
     </div>
     <div class="row">
         <div class="form-group col-ld-10">
-          <tr><td>Days:<td>  <input type="text" value="<?php echo $_day ?>" name="txtday" class="form-control" id="text" placeholder="Enter Days" required >
+          <tr><td>Days:<td>  <input type="text" value="<?php echo $_day ?>" name="txtday" pattern="[0-9]{1,2}" title="In Digits Only ex.5" class="form-control" id="text" placeholder="Enter Days" required >
         </tr><br></div>
     </div>
     <div class="row">
         <div class="form-group col-ld-10">
-            <tr><td>Date:<td><input type="text" value="<?php echo $_date ?>" name="txtdate" class="form-control" id="text" placeholder="Enter Date" required >
+            <tr><td>Date:<td><input type="date" value="<?php echo $_date ?>" name="txtdate" class="form-control" id="text" placeholder="Enter Date" required >
         </tr><br></div>
     </div>
     

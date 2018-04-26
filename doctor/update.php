@@ -43,22 +43,22 @@ $_add=$row["doc_add"];
 <table class="table">
     <div class="row">
         <div class="form-group col-ld-10">
-            <tr><td>Enter Id:<td><input type="text" value="<?php echo $_id; ?>" name="txtid" class="form-control" id="text" placeholder="Enter Id" required disabled >
+            <tr><td>Enter Id:<td><input type="text" value="<?php echo $_id; ?>" name="txtid" class="form-control" id="text" placeholder="Enter Id" required  >
         </tr><br></div>
     </div>
     <div class="row">
         <div class="form-group col-ld-10">
-            <tr><td>Enter Password:<td><input type="text" value="<?php echo $_pass ?>" name="txtpass" class="form-control" id="text" placeholder="Enter Your Password" required >
+            <tr><td>Enter Password:<td><input type="text" value="<?php echo $_pass ?>" pattern=".{6,12}" title="6 to 12 characters"  name="txtpass" class="form-control" id="text" placeholder="Enter Your Password" required >
         </tr><br></div>
     </div>
     <div class="row">
         <div class="form-group col-ld-10">
-            <tr><td>Enter License no:<td><input type="text" value="<?php echo $_lic ?>" name="txtlic" class="form-control" id="text" placeholder="Enter License Number" required >
+            <tr><td>Enter License no:<td><input type="text" value="<?php echo $_lic ?>" name="txtlic" class="form-control" id="text" placeholder="Enter License Number"  >
         </tr><br></div>
     </div>
     <div class="row">
         <div class="form-group col-ld-10">
-            <tr><td>Enter Doctor Name:<td><input type="text" value="<?php echo $_name ?>" name="txtname" class="form-control" id="text" placeholder="Enter Your Name" required >
+            <tr><td>Enter Doctor Name:<td><input type="text" value="<?php echo $_name ?>" name="txtname" pattern="[A-Za-z]{1,15}" title="Doctor Name should only contain Letters ex.parth" class="form-control" id="text" placeholder="Enter Your Name" required >
         </tr><br></div>
       <!-- <div class="row">
       <div class="form-group col-ld-10">
@@ -96,7 +96,7 @@ $_add=$row["doc_add"];
     </div>
     <div class="row">
         <div class="form-group col-ld-10">
-            <tr><td>mobile No:<td><input type="text" value="<?php echo $_mob ?>" name="txtmob" class="form-control" id="text" placeholder="Enter your Mobile number" required >
+            <tr><td>mobile No:<td><input type="text" value="<?php echo $_mob ?>" pattern="[7|8|9]{1}[0-9]{9}" title="Enter proper Mobile Number" name="txtmob" class="form-control" id="text" placeholder="Enter your Mobile number" required >
         </tr><br></div>
     </div>
     

@@ -82,7 +82,7 @@ $result=$conn->query($sql);
      echo '<td>Mobile No  </td>';
      echo '<td>'. $row["doc_mno"] .'</td>';
      echo '</tr>';
-     echo '<tr>';
+     /*echo '<tr>';
      echo '<td>Verification </td>';
      echo '<td>'. $row["doc_verify"] .'</td>';
      echo '</tr>';
@@ -90,7 +90,7 @@ $result=$conn->query($sql);
      echo '<td>Token </td>';
      echo '<td>'. $row["doc_token"] .'</td>';
      echo '</tr>';
-  echo  '</tr>';
+  echo  '</tr>';*/
  echo '<tr>';
     echo    '<td><center><a href="update.php?id='.$row["pk_doc_email_id"].'"><input type="submit" value="update" class="btn btn-success" name="btnupdate"></center></a></td>';
         echo'</tr>';

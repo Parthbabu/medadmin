@@ -35,7 +35,7 @@ $_bque=$row["blog_title"];
     <div class="row">
     <table class="table">
         <div class="form-group col-ld-10">
-            <tr><td>Enter ID :<td><input type="text" value="<?php echo $_bid; ?>" name="txtid" class="form-control" id="text" placeholder="Enter Id" required  ></tr><br>
+            <tr><td>Enter ID :<td><input type="text" value="<?php echo $_bid; ?>" name="txtid" class="form-control" id="text" placeholder="Enter Id"  ></tr><br>
         </div>
     </div>
     <div class="row">
@@ -50,7 +50,7 @@ $_bque=$row["blog_title"];
     </div>
     <div class="row">
         <div class="form-group col-ld-10">
-            <tr><td>Enter Date:<td><input type="text" value="<?php echo $_bdate ?>" name="txtdate" class="form-control" id="text" placeholder="Enter Dates" required >
+            <tr><td>Enter Date:<td><input type="date" value="<?php echo $_bdate ?>" name="txtdate" class="form-control" id="text" placeholder="Enter Dates" required >
         </tr><br></div>
     </div>
     
