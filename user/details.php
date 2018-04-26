@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -90,6 +93,7 @@ $result=$conn->query($sql);
     echo    '<td><center><a href="update.php?id='.$row["pk_usr_email_id"].'"><input type="submit" value="update" class="btn btn-success" name="btnupdate"></center></a></td>';
         echo'</tr>';
   }
+  $_SESSION['type']=$row['usr_type'];
   ?>
 <link href="../web/css/custom.css" rel="stylesheet">
 <!-- Metis Menu Plugin JavaScript -->

@@ -17,12 +17,13 @@
 <h1><center>Insert Your Data</center></h1>
 
 <!--<tr><td>Degree Name:<td><input type="text" class="form-control" name="txtdname" placeholder="Enater Degree"></tr><br>-->
-<tr><td>Degree:<td><select name="txtdname">
-<option name="1"  value="Mbbs">Mbbs</option>
+<tr><td><b>Degree:</td>
+<!--<option name="1"  value="Mbbs">Mbbs</option>
 <option name="2" value="Md">Md</option>
 <option name="3" value="DMD">DMD</option>
 
-</select>
+</select>-->
+<td><input type="text" class="form-control" name="txtdname" placeholder="Enater Degree"></td>
 </tr><br>
 
 
