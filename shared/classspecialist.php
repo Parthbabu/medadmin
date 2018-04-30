@@ -4,7 +4,8 @@ class specialist
     private static $conn=null;
     public static function  connect()
     {
-        self::$conn=mysqli_connect("localhost","root","","medsky");
+        //self::$conn=mysqli_connect("localhost","root","","medsky");
+        self::$conn=mysqli_connect('sql12.freemysqlhosting.net','sql12235011','CWflEeDvDX','sql12235011');
         return self::$conn;
     }
     public static function disconnect()
@@ -31,12 +32,12 @@ class specialist
     }
          public function update($sid,$sname)
     {
-               $cnn=specialist::connect();
-               $q="update doc_specialist set spec_name='". $sname ."'where pk_spec_id='". $sid ."'";
+        $cnn=specialist::connect();
+        $q="update doc_specialist set spec_name='". $sname ."'where pk_spec_id='". $sid ."'";
          $result=$cnn->query($q);
-         echo $q;
+        // echo $q;
         return $result;
-        specialist::disconnect();
+        //specialist::disconnect();
     }
     public function insert($sname)
     {
@@ -53,6 +54,15 @@ class specialist
     {
               $cnn=specialist::connect();
         $q="delete from doc_specialist where pk_spec_id="."'$sid'";
+        $result=$cnn->query($q);
+        echo $q;
+        return $result;
+        specialist::disconnect();
+    }
+    public function selectbyid($sid)
+    {
+              $cnn=specialist::connect();
+        $q="select from doc_specialist where pk_spec_id="."'$sid'";
         $result=$cnn->query($q);
         echo $q;
         return $result;

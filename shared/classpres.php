@@ -4,7 +4,8 @@ class prescription_all
     private static $conn=null;
     public static function  connect()
     {
-        self::$conn=mysqli_connect("localhost","root","","medsky");
+        //self::$conn=mysqli_connect("localhost","root","","medsky");
+        self::$conn=mysqli_connect('sql12.freemysqlhosting.net','sql12235011','CWflEeDvDX','sql12235011');
         return self::$conn;
     }
     public static function disconnect()

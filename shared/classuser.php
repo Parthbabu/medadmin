@@ -4,7 +4,8 @@ class user_all
     private static $conn=null;
     public static function  connect()
     {
-        self::$conn=mysqli_connect("localhost","root","","medsky");
+        //self::$conn=mysqli_connect("localhost","root","","medsky");
+        self::$conn=mysqli_connect('sql12.freemysqlhosting.net','sql12235011','CWflEeDvDX','sql12235011');
         return self::$conn;
     }
     public static function disconnect()
@@ -93,6 +94,24 @@ class user_all
     }
         user_all::disconnect();
     }
+    public function selectbyid($id)
+    {
+        $cnn=user_all::connect();
+        $q="select * from user_mst where pk_usr_email_id='". $id ."'";
+        $result=$cnn->query($q);
+        return $q;
+        user_all::disconnect();
+    
+    }
+    public function loginselect($id,$pass)
+    {
+        $cnn=user_all::connect();
+        $q='select * from user_mst where pk_usr_email_id="'. $id .'"'.' and usr_pass="'. $pass .'"';
+        $result=$cnn->query($q);
+        return $result;
+        user_all::disconnect();
+    }    
+   
 
 }
 ?>

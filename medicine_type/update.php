@@ -29,11 +29,35 @@ $row=$result->fetch_assoc();
 $_type=$row["med_type"];
    
 ?>
-<form action="updates.php" method="post" class="container">
+<?php
+if($_SERVER["REQUEST_METHOD"]=="POST")
+{
+    echo "hi";
+$_type=$_POST["txttype"];
+   
+$id=$_id;
+echo $id;
+    
+require '../shared/classmed_type.php';
+$conn=new med_type;
+$result=$conn->update($id,$_type);
+if($result==true)
+{
+    
+    header('location:medicine_type_tbl.php');
+}
+else
+{
+ echo $result;
+  echo "unsuccessfully";
+}
+}
+?>
+<form action="#" method="post" class="container" enctype="multipart/form-data">
 <table class="table">
     <div class="row">
         <div class="form-group col-ld-10">
-         <tr><td>Enter Id:<td>   <input type="text" value="<?php echo $_id; ?>" name="txtid" class="form-control" id="text" placeholder="Enter Id" required >
+         <tr><td>Enter Id:<td>   <input type="text" value="<?php echo $_id; ?>" name="txtid" class="form-control" id="text" placeholder="Enter Id" required disabled >
         </tr><br></div>
     </div>
     <div class="row">
