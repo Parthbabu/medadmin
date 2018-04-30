@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +36,7 @@
 
 <?php
 $_id=$_GET["id"];
-$conn=new mysqli("localhost","root","","medsky");
+$conn=mysqli_connect('sql12.freemysqlhosting.net','sql12235011','CWflEeDvDX','sql12235011');
 $sql="select d.*,s.*,de.* from doctor_mst d,doc_specialist s,doc_degree de where pk_spec_id=fk_spec_id AND pk_deg_id=fk_deg_id AND doc_sr_no='". $_id ."'";
 $result=$conn->query($sql);
 

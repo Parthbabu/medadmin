@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,6 +13,13 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="../shared/js/bootstrap.min.js" ></script>
+
+<script src="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/js/gijgo.min.js" type="text/javascript"></script>
+<link href="https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+
+
+    </script>
 </head>
 <body>
 <div class="jumbotron">
@@ -21,7 +31,9 @@
 
 $_id=$_GET["id"];
 
-$conn=new mysqli('localhost','root','','medsky');
+$_SESSION["id"]=$_id;
+
+$conn=mysqli_connect('sql12.freemysqlhosting.net','sql12235011','CWflEeDvDX','sql12235011');
 $sql="select * from user_mst where pk_usr_email_id='$_id'";
 //echo $sql;
 $result=$conn->query($sql);
@@ -38,12 +50,12 @@ $_name=$row["usr_name"];
     $_type=$row["usr_type"];
     
 ?>
-<form action="updates.php" method="post" class="container">
+<form action="updates.php" method="post" class="container" enctype="multipart/form-data">
 <table class="table">
 
     <div class="row">
         <div class="form-group col-ld-10">
-         <tr><td>Enter Id:<td>   <input type="text" value="<?php echo $_id; ?>" name="txtid" class="form-control" id="text" placeholder="Enter Id" required  >
+         <tr><td>Enter Id:<td>   <input type="text" value="<?php echo $_id; ?>" name="txtid" class="form-control" id="text" placeholder="Enter Id" required readonly  >
         </tr><br></div>
     </div>
     <div class="row">
@@ -70,19 +82,32 @@ $_name=$row["usr_name"];
     </div>
        <div class="row">
         <div class="form-group col-ld-10">
-            <tr><td>Profile Pic:<td><input type="text" value="<?php echo $_pic ?>" name="txtpic" class="form-control" id="text" placeholder="Enter profile pic" required >
+            <tr><td>Profile Pic:<td><input type="text" value="<?php echo $_pic ?>" name="txtpic" class="form-control" id="text" placeholder="Enter profile pic">
         </tr><br></div>
     </div>
     
        <div class="row">
         <div class="form-group col-ld-10">
-            <tr><td>Blood Group:<td><disable input type="text" value="<?php echo $_bld ?>" name="txtbld" class="form-control" id="text" placeholder="Enter Blood Grp" required >
+            <tr><td>Blood Group:</td>
+                <td size="100"><select name="txtbld" value="<?php echo $_bld ?>">
+                <option name="1"  value="<?php echo $_bld ?>"> <?php echo $_bld ?> </option>
+<option name="1"  value="A+">A+</option>
+<option name="2" value="A-">A-</option>
+<option name="3" value="B+">B+</option>
+<option name="4" value="B-">B-</option>
+<option name="5"  value="O+">O+</option>
+<option name="6"  value="O-">O-</option>
+<option name="7"  value="AB+">AB+</option>
+<option name="8"  value="AB-">AB-</option>
+</select>
+</tr><br>
+
         </tr><br></div>
     </div>
     
        <div class="row">
         <div class="form-group col-ld-10">
-            <tr><td>Birth Date:<td><input type="text" value="<?php echo $_bdate ?>" name="txtbdate" class="form-control" id="text" placeholder="Enter Birthdate" required >
+            <tr><td>Birth Date:<td><input type="text" id="datepicker"  value="<?php echo $_bdate ?>" name="txtbdate" class="form-control" id="text" placeholder="Enter Birthdate" required >
         </tr><br></div>
     </div>
     
@@ -98,5 +123,13 @@ $_name=$row["usr_name"];
         <td></tr><br></button>
     </div>
 </form>
+<script>
+$(document).ready(function () {
+    $('#datepicker').datepicker({
+      uiLibrary: 'bootstrap'
+    });
+});
+</script>
+
 </body>
 </html>

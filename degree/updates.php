@@ -11,7 +11,8 @@ $conn=new degree_all;
 $result=$conn->update($_id,$_dname);
 if($result==true)
 {
-    header('location:degree_tbl.php');
+    echo "done";
+   // header('location:degree_tbl.php');
 }
 else
 {

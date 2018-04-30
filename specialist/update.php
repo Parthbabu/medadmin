@@ -27,9 +27,34 @@ $sql="select * from doc_specialist where pk_spec_id=".$_id;
 $result=$conn->query($sql);
 $row=$result->fetch_assoc();
 $_sname=$row["spec_name"];
+echo $_sname;
    
 ?>
-<form action="updates.php" method="post" class="container">
+<?php
+if($_SERVER["REQUEST_METHOD"]=="POST")
+{
+    //echo "hii";
+$sname=$_POST["txtsname"];
+   
+$id=$_id;
+
+    
+require '../shared/classspecialist.php';
+$conn=new specialist;
+$result=$conn->update($id,$sname);
+if($result==true)
+{
+    //echo "done";
+        header('location:specialist_tbl.php');
+}
+else
+{
+ echo $result;
+  echo "unsuccessfully";
+}
+}
+?>
+<form action="#" method="post" class="container">
     <table class="table">
     <div class="row">
         <div class="form-group col-ld-10">

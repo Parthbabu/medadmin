@@ -38,7 +38,11 @@ session_start();
       
 <?php
 $_id=$_GET["id"];
-$conn=new mysqli("localhost","root","","medsky");
+//require '../shared/classuser.php';
+//$conn=new user_all;
+//$result=$conn->selectbyid($_id);
+
+$conn=mysqli_connect('sql12.freemysqlhosting.net','sql12235011','CWflEeDvDX','sql12235011');
 $sql="select * from user_mst where pk_usr_email_id='". $_id ."'";
 $result=$conn->query($sql);
 

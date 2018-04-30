@@ -23,7 +23,7 @@
 <!--<tr><td>Gender:<td><input type="text" class="form-control" name="txtgen" placeholder="Gender"></tr><br>-->
 <tr><td>Gender:<td><input type="radio" name="txtgen" value="Male" checked required="required">&nbsp  Male &nbsp &nbsp &nbsp<input type="radio" name="txtgen" value="Female">&nbsp Female</tr><br>
 <tr><td>Profile:<td><input type="text" class="form-control" name="txtpic" placeholder="Profile pic" ></tr><br>
-<tr><td>Verification:<td><disable input type="text" class="form-control" name="txtveri" placeholder="Put Verification"></tr><br>
+<!--<tr><td>Verification:<td><disable input type="text" class="form-control" name="txtveri" placeholder="Put Verification"></tr><br>-->
 <!--<tr><td>Blood Group:<td><input type="text" class="form-control" name="txtbld" placeholder="Enter Blood Group"></tr><br>-->
 <tr><td>Blood Group:<td><select name="txtbld">
 <option name="1"  value="A+">A+</option>
@@ -37,8 +37,8 @@
 </select>
 </tr><br>
 <tr><td>BirthDate:<td><input id="date" type="date" value="05-06-2018" class="form-control" name="txtbdate" placeholder="Enter User BirthDate"></tr><br>
-<tr><td>Token:<td><disable input type="text" class="form-control" name="txttoken" placeholder="Token"></tr><br>
-<tr><td>Type:<td><input type="text" class="form-control" name="txttype" placeholder="Enter User Type" required></tr><br>
+<!--<tr><td>Token:<td><disable input type="text" class="form-control" name="txttoken" placeholder="Token"></tr><br>-->
+<tr><td>Type:<td><input type="text" class="form-control" name="txttype" placeholder="Enter User Type" value="User" readonly required></tr><br>
 
 </tr><br></table>
 <tr><center><input type ="submit" class="btn btn-success" name="btnin" value="Insert"></center>
@@ -66,8 +66,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     $_gen=$_POST["txtgen"];
      $_pic=$_POST["txtpic"];
      $_veri=$_POST["txtveri"];
-   //  $_token=$_POST["txttoken"];
-    // $_type=$_POST["txttype"];
      $_bdate=$_POST["txtbdate"];
      $_bldgrp=$_POST["txtbld"];
      $r=md5(rand());

@@ -21,7 +21,7 @@
 
 $_id=$_GET["id"];
 
-$conn=new mysqli('localhost','root','','medsky');
+$conn=mysqli_connect('sql12.freemysqlhosting.net','sql12235011','CWflEeDvDX','sql12235011');
 $sql="select * from doctor_mst where pk_doc_email_id='$_id'";
 //$sql="select d.*,s.*,de.* from doctor_mst d,doc_specialist s,doc_degree de where s.pk_spec_id=d.fk_spec_id AND de.pk_deg_id=d.fk_deg_id AND d.pk_doc_email_id='". $_id ."'";
 
@@ -43,7 +43,7 @@ $_add=$row["doc_add"];
 <table class="table">
     <div class="row">
         <div class="form-group col-ld-10">
-            <tr><td>Enter Id:<td><input type="text" value="<?php echo $_id; ?>" name="txtid" class="form-control" id="text" placeholder="Enter Id" required  >
+            <tr><td>Enter Id:<td><input type="text" value="<?php echo $_id; ?>" name="txtid" class="form-control" id="text" placeholder="Enter Id" required readonly>
         </tr><br></div>
     </div>
     <div class="row">

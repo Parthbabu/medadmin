@@ -29,7 +29,30 @@ $row=$result->fetch_assoc();
 $_dname=$row["deg_name"];
    
 ?>
-<form action="updates.php" method="post" class="container">
+<?php
+if($_SERVER["REQUEST_METHOD"]=="POST")
+{
+$_dname=$_POST["txtdname"];
+   
+$id=$_id;
+
+ 
+require '../shared/classdegree.php';
+$conn=new degree_all;
+$result=$conn->update($id,$_dname);
+if($result==true)
+{
+   
+    header('location:degree_tbl.php');
+}
+else
+{
+ echo $result;
+  echo "unsuccessfully";
+}
+}
+?>
+<form action="#" method="post" class="container" enctype="multipart/form-data">
 <table class="table">
     <div class="row">
         <div class="form-group col-ld-10">
