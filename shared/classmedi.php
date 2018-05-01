@@ -16,7 +16,8 @@ class medicine_all
     public function select_all()
     {
         $cnn=medicine_all::connect();
-        $q="select * from medicine_mst";
+       // $q="select m.*,t.* from medicine_mst m,medicine_type t where m.med_type=t.pk_med_id";
+       $q="select * from medicine_mst";
         $result=$cnn->query($q);
         return $result;
         medicine_all::disconnect();

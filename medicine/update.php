@@ -21,7 +21,7 @@
 
 $_id=$_GET["id"];
 
-$conn=new mysqli('localhost','root','','medsky');
+$conn=new mysqli('sql12.freemysqlhosting.net','sql12235011','CWflEeDvDX','sql12235011');
 $sql="select * from medicine_mst where pk_med_id=".$_id;
 //echo $sql;
 $result=$conn->query($sql);

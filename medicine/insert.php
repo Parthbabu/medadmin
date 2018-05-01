@@ -15,11 +15,24 @@
 <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
 <table class="table">
 <h1><center>Insert Your Data</center></h1>
-
+<?php
+    include '../shared/classmed_type.php';
+    $obj=new med_type();
+    $data=$obj->select_all();
+?>
 <tr><td>Medicine Name:<td><input type="text" class="form-control" name="txtmname" placeholder="Enater Medicine Name" required></tr><br>
 <tr><td>Company  Name:<td><input type="text" class="form-control" name="txtcname" placeholder="Enater Company Name" required></tr><br>
 <tr><td>Medicine Uses:<td><input type="text" class="form-control" name="txtuse" placeholder="Enter Your Uses" ></tr><br>
-<tr><td>Medicine Type:<td><input type="text" class="form-control" name="txttype" placeholder="Enter Medicine Type" ></tr><br>
+<tr><td>Medicine Type:<td>
+<select name="txttype" class="form-control">
+    <?php
+    while($rw=$data->fetch_assoc())
+    {
+        echo '<option value="'.$rw["pk_med_id"].'">'.$rw["med_type"].'</option>';
+    }
+    ?>
+</select>
+</tr><br>
 
 </tr><br></table>
 <tr><center><input type ="submit" class="btn btn-success" name="btnin" value="Insert"></center>

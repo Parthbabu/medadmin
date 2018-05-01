@@ -214,7 +214,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <?php
       
 require '../shared/classrem.php';
-$res=reminder::select_all1();
+$obj=new reminder();
+$res=$obj->select_all1();
       
       while($row=$res->fetch_assoc())
 {
@@ -229,7 +230,8 @@ $res=reminder::select_all1();
 		   echo '<td>'. $row["end_date"] .'</td>';
            
            echo '<td> <a href="delete.php?id='.$row["pk_rem_id"].'"><span class="glyphicon glyphicon-trash"></span></a>
-             <a href="update.php?id='.$row["pk_rem_id"].'"> | <span class="glyphicon glyphicon-pencil"></span></a></td>';
+             
+             </td>';
 
            
        echo  '</tr>';
@@ -239,9 +241,9 @@ $res=reminder::select_all1();
       ?>
       </tbody>
     </table>
-    <center>
+    <!-- <center>
 <button type="button"  class="btn btn-primary" ><a href="insert.php">Insert</a></button>
-</center>
+</center> -->
    </div>
     </div><!-- /.table-responsive -->
   </div>

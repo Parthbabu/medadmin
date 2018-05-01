@@ -239,7 +239,7 @@ $(document).ready(function(){
           <th>Name<span class="glyphicon glyphicon-sort"></span></th>
           <th>Company<span class="glyphicon glyphicon-sort"></span></th>
           <th>Use<span class="glyphicon glyphicon-sort"></span></th>
-          <th>Type<span class="glyphicon glyphicon-sort"></span></th>
+          <!-- <th>Type<span class="glyphicon glyphicon-sort"></span></th> -->
           <th>Action</th>
         </tr>
       </thead>
@@ -253,15 +253,15 @@ $res=medicine_all::select_all();
 {
     
        echo '<tr class="success">';
-          
            echo '<td>'. $row["pk_med_id"] .'</td>';
            echo '<td>'. $row["med_name"] .'</td>';
            echo '<td>'. $row["com_name"] .'</td>';
            echo '<td>'. $row["med_use"] .'</td>';
-           echo '<td>'. $row["med_type"] .'</td>';
+           //echo '<td>'. $row["med_type"] .'</td>';
            echo '<td> <a href="delete.php?id='.$row["pk_med_id"].'"><span class="glyphicon glyphicon-trash"></span></a>
-             <a href="update.php?id='.$row["pk_med_id"].'"> | <span class="glyphicon glyphicon-pencil"></span></a></td>';
-
+    
+             </td>';
+            //  <a href="update.php?id='.$row["pk_med_id"].'"> | <span class="glyphicon glyphicon-pencil"></span></a>
            
        echo  '</tr>';
        

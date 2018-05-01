@@ -23,7 +23,7 @@
 <option name="3" value="DMD">DMD</option>
 
 </select>-->
-<td><input type="text" class="form-control" name="txtdname" placeholder="Enater Degree"></td>
+<td><input type="text" class="form-control" name="txtdname" placeholder="Enter Degree"></td>
 </tr><br>
 
 

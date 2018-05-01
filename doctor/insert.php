@@ -34,21 +34,15 @@ if(isset($_POST["btnin"])){
    
     require '../shared/classdoc.php';
     $conn=new doctor_all;
-   // $result=$conn->insert($_eid,$_pass,$_lic,$_name,$_spe,$_deg,$_pic,$_add,$_gen,$_mob,$_veri,$_token);
    $res=$conn->insert($_eid,$_pass,$_lic,$_name,$_spe,$_deg,$_pic,$_add,$_gen,$_mob,$_veri,$_token);
-    //echo $result;
-    echo "hi";
     if($res==true)
     {
-        echo "done";
-        //header('location:doctor_tbl.php');
+        echo "<script type='text/javascript'>alert('Data Inserted Successfully');</script>";
+        header('location:doctor_tbl.php');
     }
     else
     {
-        //echo $result;
-       // echo "error";
         echo " Not Successfully Insert";
-        //header('location:../web/index.php');
     }
 
 }
@@ -97,7 +91,7 @@ echo '</select>';
 ?>
 <br>
 
-<tr><td>Profile:<td><input type="text" class="form-control" name="txtpic"  placeholder="Profile pic" ></tr><br>
+<!-- <tr><td>Profile:<td><input type="text" class="form-control" name="txtpic"  placeholder="Profile pic" ></tr><br> -->
 <tr><td>Address:<td><input type="text" class="form-control" name="txtadd" placeholder="Enter Address" ></tr><br>
 
 <!--<tr><td>Gender:<td><input type="text" class="form-control" name="txtgen" placeholder="Gender"></tr><br>-->

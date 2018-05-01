@@ -21,13 +21,12 @@
 
 $_id=$_GET["id"];
 
-$conn=new mysqli('localhost','root','','medsky');
+$conn=new mysqli('sql12.freemysqlhosting.net','sql12235011','CWflEeDvDX','sql12235011');
 $sql="select * from doc_specialist where pk_spec_id=".$_id;
 //echo $sql;
 $result=$conn->query($sql);
 $row=$result->fetch_assoc();
 $_sname=$row["spec_name"];
-echo $_sname;
    
 ?>
 <?php

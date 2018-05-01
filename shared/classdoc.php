@@ -42,8 +42,8 @@ class doctor_all
     {
         $cnn=doctor_all::connect();
        // $vari=0;      
-        $q="insert into  doctor_mst values ('".$demail."','". $dpass ."','". $dlic ."','". $dname ."','". $dspe ."','". $ddeg ."','". $dpic ."','". $dadd ."','". $dgen ."','". $dmob ."','". $dveri ."','". $dtoken ."')";
-        echo $q;
+        $q="insert into  doctor_mst values ('".null."','".$demail."','". $dpass ."','". $dlic ."','". $dname ."','". $dspe ."','". $ddeg ."','". $dpic ."','". $dadd ."','". $dgen ."','". $dmob ."','". $dveri ."','". $dtoken ."')";
+       // echo $q;
         $result=$cnn->query($q);
         return $result;
         //doctor_all::disconnect();

@@ -25,8 +25,7 @@ class blog
     public function select_all1()
     {
         $cnn=blog::connect();
-        $q="select d.*,b.*,s.* from blog_tbl b,doctor_mst d,doc_specialist s where s.pk_spec_id=b.fk_spec_id AND b.fk_doc_email_id=d.pk_doc_email_id";
-        
+        $q="select d.*,b.* from blog_tbl b,doctor_mst d where b.fk_doc_email_id=d.pk_doc_email_id";
         $result=$cnn->query($q);
         return $result;
         blog::disconnect();

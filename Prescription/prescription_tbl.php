@@ -247,9 +247,9 @@ $res=prescription_all::select_all1();
       ?>
       </tbody>
     </table>
-    <center>
+    <!-- <center>
 <button type="button"  class="btn btn-primary" ><a href="insert.php">Insert</a></button>
-</center>
+</center> -->
    </div>
     </div><!-- /.table-responsive -->
   </div>

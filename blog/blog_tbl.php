@@ -204,7 +204,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           <th>Questions<span class="glyphicon glyphicon-sort"></span></th>
           <th>Answers<span class="glyphicon glyphicon-sort"></span></th>
           <th>Doctor<span class="glyphicon glyphicon-sort"></span></th>
-          <th>Specialist<span class="glyphicon glyphicon-sort"></span></th>
           <th>Date<span class="glyphicon glyphicon-sort"></span></th>
           <th>Action</th>
         </tr>
@@ -213,7 +212,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <?php
       
 require '../shared/classblog.php';
-$res=blog::select_all1();
+$obj=new blog();
+$res=$obj->select_all1();
       
       while($row=$res->fetch_assoc())
 {
@@ -224,12 +224,12 @@ $res=blog::select_all1();
            echo '<td>'. $row["blog_title"] .'</td>';
            echo '<td>'. $row["blog_desc"] .'</td>';
            echo '<td>'. $row["doc_name"] .'</td>';
-          echo '<td>'. $row["spec_name"] .'</td>';
 		   echo '<td>'. $row["blog_date"] .'</td>';
            
            echo '<td> <a href="delete.php?id='.$row["blog_id"].'"><span class="glyphicon glyphicon-trash"></span></a>
-             <a href="update.php?id='.$row["blog_id"].'"> | <span class="glyphicon glyphicon-pencil"></span></a></td>';
-
+             
+             </a></td>';
+            //  <a href="update.php?id='.$row["blog_id"].'"> | <span class="glyphicon glyphicon-pencil"></span>
            
        echo  '</tr>';
        

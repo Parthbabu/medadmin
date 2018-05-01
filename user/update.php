@@ -80,12 +80,12 @@ $_name=$row["usr_name"];
             <tr><td>Gender:<td><input type="text" value="<?php echo $_gen ?>" name="txtgen" class="form-control" id="text" placeholder="Enter Profile Pic" required >
         </tr><br></div>-->
     </div>
-       <div class="row">
+       <!-- <div class="row">
         <div class="form-group col-ld-10">
             <tr><td>Profile Pic:<td><input type="text" value="<?php echo $_pic ?>" name="txtpic" class="form-control" id="text" placeholder="Enter profile pic">
         </tr><br></div>
     </div>
-    
+     -->
        <div class="row">
         <div class="form-group col-ld-10">
             <tr><td>Blood Group:</td>

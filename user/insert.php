@@ -22,13 +22,8 @@
 <tr><td>Password:<td><input type="password" class="form-control" name="txtpass" pattern=".{6,12}" title="6 to 12 chracters" placeholder="Enter Password" required></tr><br>
 <!--<tr><td>Gender:<td><input type="text" class="form-control" name="txtgen" placeholder="Gender"></tr><br>-->
 <tr><td>Gender:<td><input type="radio" name="txtgen" value="Male" checked required="required">&nbsp  Male &nbsp &nbsp &nbsp<input type="radio" name="txtgen" value="Female">&nbsp Female</tr><br>
-<<<<<<< HEAD
 <!-- <tr><td>Profile:<td><input type="text" class="form-control" name="txtpic" placeholder="Profile pic" ></tr><br> -->
-<!-- <tr><td>Verification:<td><disable input type="text" class="form-control" name="txtveri" placeholder="Put Verification"></tr><br> -->
-=======
-<tr><td>Profile:<td><input type="text" class="form-control" name="txtpic" placeholder="Profile pic" ></tr><br>
 <!--<tr><td>Verification:<td><disable input type="text" class="form-control" name="txtveri" placeholder="Put Verification"></tr><br>-->
->>>>>>> 79cd5409c75793bf2d8b6c1cc6059ad63b78bb0a
 <!--<tr><td>Blood Group:<td><input type="text" class="form-control" name="txtbld" placeholder="Enter Blood Group"></tr><br>-->
 <tr><td>Blood Group:<td><select name="txtbld">
 <option name="1"  value="A+">A+</option>
@@ -83,6 +78,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
     if($result===true)
     {
+        echo "<script type='text/javascript'>alert('Data Inserted Successfully');</script>";
          header('location:user_tbl.php');
     }
     else
